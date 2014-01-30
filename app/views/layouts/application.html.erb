@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demaths</title>
+  <title>DeMaths</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="banner">
+De Maths 
+</div>
+<div id="subtitle">De Brun Centre for Mathematics</div>
+<div id="navigation">
+<div id="home"> 
+<%= link_to 'Home', root_path %>
+</div>
+<div id="login">
+  <% if user_signed_in? %>
+    <%= link_to current_user.email, edit_user_registration_path %> |
+    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :confirm => "Sign out?" %>
+  <% else %>
+    <%= link_to 'Sign in', new_user_session_path %>
+  <% end %>
+</div>
+</div>
+<div id="date" align="right">
+<%= Time.now.strftime("%A, %B %-d,  %Y. %H:%M:%S.") %>
+</div>
+<div id="columns">
+<div id="side">
+<%= yield :side %>
+</div>
+<div id="container">
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= alert %></p>
 
 <%= yield %>
+
+</div>
+</div>
 
 </body>
 </html>
