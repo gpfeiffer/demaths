@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DeMaths</title>
+  <title>DeBrun</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div id="banner">
-De Maths 
+De Brún
 </div>
-<div id="subtitle">De Brun Centre for Mathematics</div>
+<div id="subtitle">Centre for Mathematics</div>
 <div id="navigation">
 <div id="home"> 
 <%= link_to 'Home', root_path %>
+| <%= link_to 'Members', members_path %>
 </div>
 <div id="login">
   <% if user_signed_in? %>
@@ -24,8 +25,8 @@ De Maths
   <% end %>
 </div>
 </div>
-<div id="date" align="right">
-<%= Time.now.strftime("%A, %B %-d,  %Y. %H:%M:%S.") %>
+<div id="date" align="right" style="font-size: smaller;">
+<%= Time.now.strftime("Page created on %A, %B %-d, at %Y. %H:%M:%S.") %>
 </div>
 <div id="columns">
 <div id="side">
