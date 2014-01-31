@@ -1,4 +1,7 @@
 Demaths::Application.routes.draw do
+  resources :students
+
+
   resources :members
 
 
