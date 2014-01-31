@@ -1,14 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h3>Members</h3>
 
-<p>
-  <b>First name:</b>
-  <%= @member.first_name %>
-</p>
-
-<p>
-  <b>Last name:</b>
-  <%= @member.last_name %>
-</p>
+<h1>
+  <%= @member.first_last %>
+</h1>
 
 <p>
   <b>Affiliation:</b>
@@ -17,4 +11,5 @@
 
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Destroy', @member, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', members_path %>

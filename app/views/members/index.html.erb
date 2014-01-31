@@ -1,23 +1,15 @@
-<h1>Listing members</h1>
+<h1>Members</h1>
 
 <table>
   <tr>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Name</th>
     <th>Affiliation</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @members.each do |member| %>
   <tr>
-    <td><%= member.first_name %></td>
-    <td><%= member.last_name %></td>
+    <td><%= link_to member.first_last, member %></td>
     <td><%= member.affiliation %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
