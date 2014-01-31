@@ -7,10 +7,12 @@
     padding-bottom: 10px;
     font-weight: bold;
     text-align: center;
+    background: rgb(255,255,204);
 }
 
 #subtitle {
-  text-align: center;
+    background: rgb(255,255,204);
+    text-align: center;
 }
 
 #navigation {
@@ -21,12 +23,12 @@
 }
 
 #navigation #home {
-  a {
-      color: white;
-      text-decoration: none;
-  }
-  float: left;
-  width: 41em;
+    a {
+	color: white;
+	text-decoration: none;
+    }
+    float: left;
+    width: 41em;
 }
 
 #navigation #login {
