@@ -1,4 +1,10 @@
 Demaths::Application.routes.draw do
+  resources :members
+
+
+  resources :roles
+
+
   devise_for :users
 
   get "welcome/index"
