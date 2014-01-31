@@ -1,2 +1,16 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome ...</h1>
+<p>... to the world of Mathematical Research Clusters.</p>
+
+<p>From here you can access:
+<ul>
+  <li>
+    the <%= Member.count %> <%= link_to 'members', members_path %> of the centre;
+  </li>
+  <li>
+    the <%= Student.count %> <%= link_to 'students', students_path %> of the centre;
+  </li>
+  <li>
+    the latest news ...
+  </li>
+</ul>
+</p>
