@@ -1,0 +1,11 @@
+<% institutions_by_country = @institutions.group_by(&:location) %>
+\item\emph{within NUI Galway}
+<%= institutions_by_country["NUI Galway"].map(&:name).join("; ") %>.
+\item\emph{within Ireland}
+<%= institutions_by_country["Ireland"].map(&:name).join("; ") %>.
+\item\emph{International}
+<% @institutions.each do |institution| %>
+<% if not ["NUI Galway", "Ireland"].include? institution.location %>
+<%= institution.name %>, <%= institution.location %>;
+<% end %>
+<% end %>
