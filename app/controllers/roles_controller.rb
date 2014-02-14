@@ -2,7 +2,8 @@ class RolesController < ApplicationController
   # GET /roles
   # GET /roles.json
   def index
-    @roles = Role.all
+    @user = current_user
+    @roles = @user.roles
 
     respond_to do |format|
       format.html # index.html.erb

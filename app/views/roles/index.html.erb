@@ -24,4 +24,11 @@
 
 <br />
 
-<%= link_to 'New Role', new_role_path %>
+Create a new profile:
+<ul>
+  <% if can? :create, Admin %>
+    <li><%= link_to 'Create New Admin Profile', new_admin_path %></li>
+  <% end %>
+  <li><%= link_to 'Create New Member Profile', new_member_path %></li>
+  <li><%= link_to 'Create New student Profile', new_student_path %></li>
+</ul>
