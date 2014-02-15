@@ -7,6 +7,14 @@
     font-weight: bold;
     text-align: center;
     background: rgb(255,255,204);
+    a {
+	color: black;
+        text-decoration: none;
+    }     
+    a:hover {
+	background: #777;
+	color: rgb(255,255,204);
+    }
 }
 
 #subtitle {
@@ -26,8 +34,8 @@
 
 #navigation #home {
     a {
-	color: white;
-	text-decoration: none;
+        color: white;
+        text-decoration: none;
     }
     float: left;
     width: 41em;
@@ -35,33 +43,33 @@
 
 #navigation #login {
     a {
-	color: white;
-	text-decoration: none;
+        color: white;
+        text-decoration: none;
     }
     margin-left: 42em;
     text-align: right;
 }
 
 #side {
-  a {
-      text-decoration: none;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0pt;
-    margin: 0pt;
-    font-size: 12px;
-    line-height: 15px;
-  }
-  float: left;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  width: 16em;
+    a {
+	text-decoration: none;
+    }
+    ul {
+	list-style-type: none;
+	padding: 0pt;
+	margin: 0pt;
+	font-size: 12px;
+	line-height: 15px;
+    }
+    float: left;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    width: 16em;
 }
 
 #alert {
-  color: red;
+    color: red;
 }
 
 #container {

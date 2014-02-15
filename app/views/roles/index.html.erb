@@ -2,21 +2,15 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Profile</th>
     <th>Profile type</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @roles.each do |role| %>
   <tr>
-    <td><%= role.user_id %></td>
-    <td><%= role.profile_id %></td>
+    <td><%= link_to role.profile.name, role.profile %></td>
     <td><%= role.profile_type %></td>
-    <td><%= link_to 'Show', role %></td>
-    <td><%= link_to 'Edit', edit_role_path(role) %></td>
     <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

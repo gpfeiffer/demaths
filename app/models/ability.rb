@@ -7,6 +7,9 @@ class Ability
     if user.admin?
       can :manage, :all
     else
+      can [:update], User do |u|
+        u == user
+      end
       can [:create, :read], [Member, Student]
       can [:update, :destroy], Member do |member|
         member.user == user
