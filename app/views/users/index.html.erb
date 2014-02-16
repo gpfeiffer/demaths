@@ -16,7 +16,7 @@
     <td><%= user.current_sign_in_at %></td>
     <td align="right"><%= user.sign_in_count %></td>
     <td><%= user.roles.count %></td>
-    <td><%= user.role.name %></td>
+    <td><%= user.role.name if user.role %></td>
   </tr>
 <% end %>
 </table>
