@@ -6,6 +6,8 @@
     <td>reset</td>
     <td>signed in</td>
     <td>#</td>
+    <td>r</td>
+    <td></td>
   </tr>
 <% @users.each do |user| %>
   <tr>
@@ -13,6 +15,8 @@
     <td><%= user.reset_password_sent_at %></td>
     <td><%= user.current_sign_in_at %></td>
     <td align="right"><%= user.sign_in_count %></td>
+    <td><%= user.roles.count %></td>
+    <td><%= user.role.name %></td>
   </tr>
 <% end %>
 </table>
