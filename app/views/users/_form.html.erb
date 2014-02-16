@@ -11,11 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :role_id %><br />
-    <%= f.select :role_id, @user.roles.map { |role| [role.name, role.id] } %>
-  </div>
+  <table>
+    <% @roles.each do |role| %>
+      <tr><td align="right"><%= f.label :role_id, role.name %></td>
+      <td><%= f.radio_button :role_id, role.id %></td></tr>
+    <% end %>
+  </table>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Select Profile' %>
   </div>
 <% end %>

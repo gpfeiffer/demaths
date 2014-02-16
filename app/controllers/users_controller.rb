@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @roles = @user.admin? ? Role.all : @user.roles
   end
 
   def update
@@ -50,7 +51,6 @@ class UsersController < ApplicationController
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user.role.profile, notice: 'Profile was successfully updated.' }
         format.json { head :no_content }
-        format.js
       else
         format.html { render action: "edit" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
