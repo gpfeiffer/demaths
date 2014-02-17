@@ -3,7 +3,7 @@
   <ul><%= render Member.all %></ul>
 <% end %>
 
-<h3>Members</h3>
+<h3><%= link_to 'Members', members_path %></h3>
 
 <h1>
   <%= @member.first_last %>
@@ -14,15 +14,17 @@
   <%= @member.affiliation %>
 </p>
 
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Destroy', @member, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', members_path %>
+<% if can? :edit, @member %>
+  <%= link_to 'Edit', edit_member_path(@member) %> 
+<% end %>
+<% if can? :destroy, @member %>
+| <%= link_to 'Destroy', @member, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 
 <hr />
 <% if @member.iris_url.present? %>
 <p>
-  <b>From</b>
+  <b>Profile</b> on
   <%= link_to 'Iris', @member.full_iris_url %>:
 </p>
 
