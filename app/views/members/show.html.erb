@@ -14,14 +14,21 @@
   <%= @member.affiliation %>
 </p>
 
-<% if @member.iris_url.present? %>
-<p>
-  <b>Link:</b>
-  <%= link_to 'Iris', @member.full_iris_url %>
-</p>
-<% end %>
-
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Destroy', @member, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', members_path %>
+
+<hr />
+<% if @member.iris_url.present? %>
+<p>
+  <b>From</b>
+  <%= link_to 'Iris', @member.full_iris_url %>:
+</p>
+
+<% @member.iris_content.each do |div| %>
+  <%= content_tag :h2, div.attributes["title"].value %>
+  <%= raw div %>
+<% end %>
+<hr />
+<% end %>
