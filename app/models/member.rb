@@ -20,4 +20,8 @@ class Member < ActiveRecord::Base
   def to_s
     name
   end
+
+  def full_iris_url
+    "http://www.nuigalway.ie/our-research/people/mathematics-statistics-and-applied-mathematics/#{iris_url}/"
+  end
 end
