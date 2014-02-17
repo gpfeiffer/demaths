@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140214134153) do
+ActiveRecord::Schema.define(:version => 20140217123717) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20140214134153) do
     t.string   "affiliation"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "iris_url"
   end
 
   create_table "roles", :force => true do |t|

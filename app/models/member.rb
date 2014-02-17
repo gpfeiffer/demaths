@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :affiliation, :first_name, :last_name
+  attr_accessible :affiliation, :first_name, :iris_url, :last_name
 
   default_scope :order => [:last_name, :first_name]
 

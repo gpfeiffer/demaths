@@ -9,6 +9,13 @@
   <%= @member.affiliation %>
 </p>
 
+<% if @member.iris_url.present? %>
+<p>
+  <b>Link:</b>
+  <%= link_to 'Iris', @member.iris_url %>
+</p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_member_path(@member) %> |
 <%= link_to 'Destroy', @member, method: :delete, data: { confirm: 'Are you sure?' } %> |
