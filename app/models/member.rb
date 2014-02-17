@@ -38,6 +38,7 @@ class Member < ActiveRecord::Base
     content = Nokogiri::HTML(open(full_iris_url)).css("div[title]")
     image = content.css("img[alt='My Photograph']").first
     image["src"] = URI.join(full_iris_url, image["src"]).to_s
+    image["style"] = "height: 180px; width: auto;"
     content
   end
 
