@@ -4,13 +4,10 @@ class Student < ActiveRecord::Base
   default_scope :order => [:last_name, :first_name]
 
   has_one :role, :as => :profile, :dependent => :destroy
+  has_one :user, :through => :role
 
   def first_last
     "#{first_name} #{last_name}"
-  end
-
-  def user
-    role.user
   end
 
   def name
