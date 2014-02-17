@@ -42,3 +42,4 @@ gem 'cancan'
 
 gem 'kramdown'
 gem 'twitter'
+gem 'nokogiri'
