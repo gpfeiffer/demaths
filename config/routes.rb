@@ -1,4 +1,7 @@
 Demaths::Application.routes.draw do
+  resources :posts
+
+
   resources :admins
 
 

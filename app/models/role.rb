@@ -4,6 +4,8 @@ class Role < ActiveRecord::Base
   belongs_to :user
   belongs_to :profile, :polymorphic => true
 
+  has_many :posts, :foreign_key => :author_id
+
   def name
     "#{profile.name} (#{profile_type})"
   end
