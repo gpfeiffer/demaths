@@ -1,25 +1,14 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
+<h2>
   <%= @post.title %>
-</p>
+</h3>
 
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
+<div id="author-date">
+  <%= @post.author.name %> at <%= @post.published_at %>.
+</div>
 
-<p>
-  <b>Published at:</b>
-  <%= @post.published_at %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @post.author_id %>
-</p>
-
+<div id="post-body">
+  <%= markdown @post.body %>
+</div>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
