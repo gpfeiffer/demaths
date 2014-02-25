@@ -10,7 +10,7 @@ class Ability
       can [:update], User do |u|
         u == user
       end
-      can [:create, :read], [Member, Student]
+      can [:read], [Member, Student]
       can [:update, :destroy], Member do |member|
         member.user == user
       end
