@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :author_id %>
+
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -23,10 +25,7 @@
     <%= f.label :published_at %><br />
     <%= f.datetime_select :published_at %>
   </div>
-  <div class="field">
-    <%= f.label :author_id %><br />
-    <%= f.number_field :author_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
