@@ -16,4 +16,6 @@
 
 <br />
 
+<% if can? :create, Student %>
 <%= link_to 'New Student', new_student_path %>
+<% end %>

@@ -16,4 +16,6 @@
 
 <br />
 
+<% if can? :create, Member %>
 <%= link_to 'New Member', new_member_path %>
+<% end %>

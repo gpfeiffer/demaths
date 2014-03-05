@@ -25,7 +25,8 @@
 <% if @member.iris_url.present? %>
 <p>
   <b>Profile</b> on
-  <%= link_to 'Iris', @member.full_iris_url %>:
+  <%= link_to 'Iris', @member.full_iris_url %>
+(<%= link_to 'Log in', 'https://iris.nuigalway.ie' %> to modify):
 </p>
 
 <% @member.iris_content.each do |div| %>

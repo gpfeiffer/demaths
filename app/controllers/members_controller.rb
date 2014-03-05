@@ -1,4 +1,6 @@
 class MembersController < ApplicationController
+  skip_before_filter :authenticate_user!, :only => [:show, :index]
+
   # GET /members
   # GET /members.json
   def index
