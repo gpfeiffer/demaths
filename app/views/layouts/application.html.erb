@@ -36,7 +36,7 @@
     <% role = current_user.role %>
     <% if role %>
       <%= link_to 'Home', role.profile %> |
-      <%= link_to 'New Post', new_post_path(:role_id => role) %> |
+      <%= link_to 'News', posts_path(:role_id => role) %> |
     <% end %>
   <% end %>
 <%= link_to 'Members', members_path %> |
