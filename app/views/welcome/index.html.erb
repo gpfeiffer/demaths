@@ -1,18 +1,9 @@
 <h1>Welcome ...</h1>
-<p>... to the world of Mathematical Research Clusters.</p>
+<p>... to the Mathematical Research Cluster at NUI Galway.</p>
 
-<p>From here you can access:
-<ul>
-  <li>
-    the <%= Member.count %> <%= link_to 'members', members_path %> of the centre;
-  </li>
-  <li>
-    the <%= Student.count %> <%= link_to 'students', students_path %> of the centre;
-  </li>
-  <li>
-    the latest news ...
-  </li>
-</ul>
-</p>
+<h1>News</h1>
+<%= render @posts %>
 
-<iframe src="https://www.google.com/calendar/embed?title=What&#39;s%20on%3F&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=debrun.maths%40gmail.com&amp;color=%232952A3&amp;ctz=Europe%2FDublin" style=" border:none " width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<% content_for :side do %>
+<iframe src="https://www.google.com/calendar/embed?showNav=0&amp;showPrint=0&amp;showTabs=0&amp;mode=AGENDA&amp;title=What&#39;s%20on%3F&amp;showCalendars=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=debrun.maths%40gmail.com&amp;src=en.irish%23holiday%40group.v.calendar.google.com&amp;color=%23853104&amp;color=%232952A3&amp;ctz=Europe%2FDublin" style=" border:none " width="200" height="600" frameborder="0" scrolling="no"></iframe>
+<% end %>

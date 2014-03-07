@@ -1,0 +1,15 @@
+<h3>
+  <%= post.title %>
+</h3>
+
+<div id="author-date">
+  <%= post.author.name %> at <%= post.published_at %>.
+</div>
+
+<div id="post-body">
+  <%= markdown post.body %>
+</div>
+
+<%= link_to 'Edit', edit_post_path(post) %> |
+<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', posts_path %>
