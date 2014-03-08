@@ -11,7 +11,19 @@ class User < ActiveRecord::Base
   has_many :roles
   belongs_to :role
 
+  def type
+    role && role.profile_type
+  end
+
   def admin?
-    role && role.profile_type == "Admin"
+    type == "Admin"
+  end
+
+  def member?
+    type == "Member"
+  end
+
+  def student?
+    type == "Student"
   end
 end

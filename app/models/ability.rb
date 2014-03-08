@@ -18,5 +18,17 @@ class Ability
         student.user == user
       end
     end
+    if user.member?
+      can [:create, :read], Post
+      can [:update, :destroy], Post do |post|
+        post.author == user.role
+      end
+    end
+    if user.student?
+      can [:create, :read], Post
+      can [:update, :destroy], Post do |post|
+        post.author == user.role
+      end
+    end
   end
 end
