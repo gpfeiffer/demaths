@@ -6,7 +6,7 @@
     <%= post.author %> at <%= post.published_at %>:
   </p>
   <div class="post-short">
-    <%= post.body %>
+    <%= markdown post.body %>
     <%= link_to '[more...]', post %>
   </div>
 <% end %>
