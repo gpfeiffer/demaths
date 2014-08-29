@@ -1,6 +1,7 @@
 <h1>Members</h1>
 
 [<%= mail_to @members.map(&:user).map(&:email).join(','), "Mail All", :cc => "goetz.pfeiffer@nuigalway.ie" %>]
+[<%= mail_to Student.all.map(&:user).compact.map(&:email).join(','), "Mail All", :cc => "goetz.pfeiffer@nuigalway.ie" %>]
 
 <table>
   <tr>
