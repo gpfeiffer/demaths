@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  user_id: 1
-  profile_id: 1
-  profile_type: MyString
+  user: one
+  profile: one
+  profile_type: Admin
 
 two:
-  user_id: 1
-  profile_id: 1
-  profile_type: MyString
+  user: two
+  profile: one
+  profile_type: Member
+
+three:
+  user: one
+  profile: two
+  profile_type: Member
